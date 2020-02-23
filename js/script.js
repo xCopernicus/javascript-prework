@@ -1,10 +1,8 @@
-var computerMove, playerMove, randomNumber;
-
-playerMove = '____'
+var computerMove, playerMove, randomNumber, playerInput;
 
 randomNumber = Math.floor(Math.random() * 3 + 1);
 
-console.log('Wylosowana liczba to: ' + randomNumber);
+console.log('Komputer wybrał: ' + randomNumber);
 
 if (randomNumber == '1') {
   computerMove = 'kamień';
@@ -14,4 +12,20 @@ if (randomNumber == '1') {
   computerMove = 'nożyce';
 }
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + playerMove + ', to wygrywasz!');
+playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
+console.log('Gracz wybrał: ' + playerInput);
+
+if (playerInput == '1') {
+  playerMove = 'kamień';
+} else if (playerInput == '2') {
+  playerMove = 'papier';
+} else if (playerInput == '3') {
+  playerMove = 'nożyce';
+} else {
+  printMessage('Error! Odśwież strone!');
+  playerMove = 'Wybrna opcja nie istnieje';
+}
+
+printMessage('Twój ruch: ' + playerMove);
+printMessage('Ruch komputera: ' + computerMove);
