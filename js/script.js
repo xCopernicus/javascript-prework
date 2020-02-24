@@ -9,7 +9,8 @@ function getMoveName(moveId) {
   } else if (moveId == '3') {
     return 'scissors';
   } else {
-    return 'Error! Refresh the page!';
+    printMessage('Wrong number inserted was changed to 1: rock')
+    return 'rock';
   }
 }
 
