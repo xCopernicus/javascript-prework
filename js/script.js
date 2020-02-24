@@ -1,4 +1,4 @@
-var player1, player2, moveId, computerMove, playerMove, randomNumber, playerInput;
+var player1Name, player2Name player1, player2, moveId, computerMove, playerMove, randomNumber, playerInput;
 
 function getMoveName(moveId) {
   console.log('function getMoveName called with argument: ' + moveId);
