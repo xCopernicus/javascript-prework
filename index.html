@@ -2,13 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Kamień, papier, nożyce</title>
+	<title>Rock, Paper, Scissors</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+	<link href="vendor/bootstrap-grid.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div id="buttons"></div>
-		<div id="messages"></div>
+		<h1 class="title">Rock Paper Scissors</h1>
+		<div class="game row">
+			<div class="col-4 col choose">
+				<h2>Choose:</h2>
+			</div>
+			<div class="col-4 col" id="buttons">
+				<button class="btn-game" id="button-rock">Rock</button>
+				<button class="btn-game" id="button-paper">Paper</button>
+				<button class="btn-game" id="button-scissors">Scissors</button>
+			</div>
+			<div class="col-4 col messages" id="messages">
+				<div> </div>
+				<div> </div>
+			</div>
+		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
