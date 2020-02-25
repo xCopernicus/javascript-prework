@@ -73,6 +73,9 @@ function printScore2(){
 
 function reset(){
   clearMessages();
+  printMessage('Welcome to Rock, Paper, Scissors');
+  printMessage('Let\'s play!')
+
   score1 = 0;
   score2 = 0;
   result1.innerHTML = 0;
