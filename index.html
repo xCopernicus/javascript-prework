@@ -10,6 +10,15 @@
 <body>
 	<div class="container">
 		<h1 class="title">Rock Paper Scissors</h1>
+		<div class="scoreboard">
+			<h3>Scoreboard</h3>
+			<div class="score display row">
+				<div class="player col-6" id="player-1-Name"></div>
+				<div class="player col-6" id="player-2-Name"></div>
+				<div class="col-6" id="player-1">0</div>
+				<div class="col-6" id="player-2">0</div>
+			</div>
+		</div>
 		<div class="game row">
 			<div class="col-4 col choose">
 				<h2>Choose:</h2>
@@ -19,10 +28,13 @@
 				<button class="btn-game" id="button-paper">Paper</button>
 				<button class="btn-game" id="button-scissors">Scissors</button>
 			</div>
-			<div class="col-4 col messages" id="messages">
-				<div> </div>
-				<div> </div>
+			<div class="col-4 col messages display" id="messages">
+				<div></div>
+				<div></div>
 			</div>
+		</div>
+		<div class="reset">
+			<button class="btn-game btn-reset" id="button-reset">Reset</button>
 		</div>
 	</div>
 	<script src="js/functions.js"></script>

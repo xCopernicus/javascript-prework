@@ -4,6 +4,8 @@ $color-primary: #2ecc71;
 $color-primary-dark: #27ae60;
 $color-secondary: #e67e22;
 $color-secondary-dark: #d35400;
+$color-red: #e74c3c;
+$color-red-dark: #c0392b;
 $color-text: #2c3e50;
 
 $font-main: 'PT Mono', sans-serif;
@@ -66,20 +68,41 @@ h1, h2, div, button {
   font-size: 18px;
 }
 
-.messages.col.col-4 {
+.display {
   background-color: $color-primary-dark;
-  min-height: 48px;
   border: 1px $color-primary-dark solid;
   border-radius: 6px;
   padding: 5px 0;
+}
+
+.messages.col.col-4 {
+  min-height: 63px;
   max-width: 400px;
   margin-top: 30px;
 }
 
-.score  {
-//  width: 100px;
+.messages div {
+  margin: 5px;
 }
 
-.score div {
-  display: inline-block;
+.scoreboard {
+  width: 200px;
+  position: absolute;
+  right: 0;
+}
+
+.player {
+  margin-bottom: 5px;
+}
+
+.reset {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+}
+
+.btn-reset {
+  background-color: $color-red;
+  border-color: $color-red-dark;
+  height: 40px;
 }
