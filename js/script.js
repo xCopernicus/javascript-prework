@@ -1,15 +1,13 @@
-var buttonReset, score1, score2, buttonScissors, buttonPaper, buttonRock, buttonName, player1Name, player2Name, player1, player2, moveId, computerMove, playerMove, randomNumber, playerInput;
-
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
-buttonReset = document.getElementById('button-reset');
-result1 = document.getElementById('player-1');
-result2 = document.getElementById('player-2');
-score1 = 0
-score2 = 0
-player1Name = 'Computer'
-player2Name = 'Player'
+const buttonRock = document.getElementById('button-rock'),
+  buttonPaper = document.getElementById('button-paper'),
+  buttonScissors = document.getElementById('button-scissors'),
+  buttonReset = document.getElementById('button-reset'),
+  result1 = document.getElementById('player-1'),
+  result2 = document.getElementById('player-2'),
+  player1Name = 'Computer',
+  player2Name = 'Player';
+let score1 = 0,
+  score2 = 0;
 
 function getMoveName(moveId){
   console.log('function getMoveName called with argument: ' + moveId);
@@ -50,11 +48,11 @@ function displayResult(player1, player2){
 
 function buttonClicked(buttonName){
   clearMessages();
-  randomNumber = Math.floor(Math.random() * 3 + 1);
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log(player1Name + ' selected: ' + randomNumber);
   console.log(player2Name + ' selected: ' + buttonName);
-  computerMove = getMoveName(randomNumber);
-  playerMove = buttonName;
+  let computerMove = getMoveName(randomNumber);
+  let playerMove = buttonName;
   displayResult(computerMove, playerMove);
 //  printMessage(score1 + ' : ' + score2)
   printScore1()
@@ -67,7 +65,7 @@ function printScore1(){
 }
 
 function printScore2(){
-  console.log('Changed player1 score to: ' + score2);
+  console.log('Changed player2 score to: ' + score2);
 	result2.innerHTML = score2;
 }
 
@@ -75,16 +73,14 @@ function reset(){
   clearMessages();
   printMessage('Welcome to Rock, Paper, Scissors');
   printMessage('Let\'s play!')
-
   score1 = 0;
   score2 = 0;
-  result1.innerHTML = 0;
-  result2.innerHTML = 0;
+  printScore1();
+  printScore2();
 }
 
 document.getElementById('player-1-Name').innerHTML = player1Name
 document.getElementById('player-2-Name').innerHTML = player2Name
-
 buttonRock.addEventListener('click', function(){ buttonClicked('rock'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('paper'); });
 buttonScissors.addEventListener('click', function(){ buttonClicked('scissors'); });
