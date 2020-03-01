@@ -11,11 +11,11 @@ let score1 = 0,
 
 function getMoveName(moveId){
   console.log('function getMoveName called with argument: ' + moveId);
-  if (moveId == '1') {
+  if (moveId === 1) {
     return 'rock';
-  } else if (moveId == '2') {
+  } else if (moveId === 2) {
     return 'paper';
-  } else if (moveId == '3') {
+  } else if (moveId === 3) {
     return 'scissors';
   }
 }
@@ -48,15 +48,14 @@ function displayResult(player1, player2){
 
 function buttonClicked(buttonName){
   clearMessages();
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log(player1Name + ' selected: ' + randomNumber);
   console.log(player2Name + ' selected: ' + buttonName);
-  let computerMove = getMoveName(randomNumber);
-  let playerMove = buttonName;
+  const computerMove = getMoveName(randomNumber);
+  const playerMove = buttonName;
   displayResult(computerMove, playerMove);
-//  printMessage(score1 + ' : ' + score2)
-  printScore1()
-  printScore2()
+  printScore1();
+  printScore2();
 }
 
 function printScore1(){
